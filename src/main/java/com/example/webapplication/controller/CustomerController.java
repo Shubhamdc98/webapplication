@@ -19,29 +19,29 @@ public class CustomerController {
 
     private final customerService customService;
 
-    @PostMapping("/customer")
-    private ResponseEntity<Customer> postCustomer(@RequestBody Customer cust){
-        Customer ExistingCustomer = customService.postCustomer(cust);
-        if(ExistingCustomer == null) {
-            return ResponseEntity.notFound().build();
-        }else {
-            return ResponseEntity.ok(cust);
-        }
-    }
-
-    @GetMapping("/AllCustomer")
-    private ResponseEntity<List<Customer>> getAllCustomer(){
-        List<Customer> allCustomer = customService.getAllCustomer();
-        return ResponseEntity.ok(allCustomer);
-    }
-
-    @GetMapping("/customer/{id}")
-    private ResponseEntity<Customer> getCustomerById(@PathVariable Long id){
-        Customer cust = customService.findCustomerById(id);
-        if(cust == null)
-            return ResponseEntity.notFound().build();
-        return ResponseEntity.ok(cust);
-    }
+//    @PostMapping("/customer")
+//    private ResponseEntity<Customer> postCustomer(@RequestBody Customer cust){
+//        Customer ExistingCustomer = customService.postCustomer(cust);
+//        if(ExistingCustomer == null) {
+//            return ResponseEntity.notFound().build();
+//        }else {
+//            return ResponseEntity.ok(cust);
+//        }
+//    }
+//
+//    @GetMapping("/AllCustomer")
+//    private ResponseEntity<List<Customer>> getAllCustomer(){
+//        List<Customer> allCustomer = customService.getAllCustomer();
+//        return ResponseEntity.ok(allCustomer);
+//    }
+//
+//    @GetMapping("/customer/{id}")
+//    private ResponseEntity<Customer> getCustomerById(@PathVariable Long id){
+//        Customer cust = customService.findCustomerById(id);
+//        if(cust == null)
+//            return ResponseEntity.notFound().build();
+//        return ResponseEntity.ok(cust);
+//    }
 
 
 
