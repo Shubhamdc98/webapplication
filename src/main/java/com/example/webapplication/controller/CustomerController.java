@@ -4,6 +4,7 @@ import com.example.webapplication.entity.Customer;
 import com.example.webapplication.repository.customerRepository;
 import com.example.webapplication.service.customerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,8 +16,10 @@ import java.util.List;
 @CrossOrigin("*")
 public class CustomerController {
 
+    @Autowired
     private final customerRepository customRepo;
 
+    @Autowired
     private final customerService customService;
 
 //    @PostMapping("/customer")
