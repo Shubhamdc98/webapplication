@@ -2,7 +2,9 @@ package com.example.webapplication.service;
 
 import com.example.webapplication.entity.Customer;
 import com.example.webapplication.repository.customerRepository;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class customerService {
 
+    @Autowired
     private final customerRepository customRepo;
 
     public Customer postCustomer(Customer newCustomer) {
